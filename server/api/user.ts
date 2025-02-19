@@ -7,7 +7,7 @@ export default defineEventHandler((event) => {
       email: "mark@gmail.com",
       role: "admin",
       password: '123456',
-      permissions: ["view-dashboard", "list-user"]
+      permissions: ["view-dashboard", "list-user","list-view","grid-view"]
     },
     {
       id: 2,
@@ -15,7 +15,7 @@ export default defineEventHandler((event) => {
       email: "xiexieni@gmail.com",
       role: "member",
       password: '123456',
-      permissions: ["view-dashboard"]
+      permissions: ["view-dashboard","grid-view"]
     }
   ]
 });

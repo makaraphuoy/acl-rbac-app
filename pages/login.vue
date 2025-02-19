@@ -80,6 +80,7 @@
   import { Form, Field, ErrorMessage, useForm, useField } from 'vee-validate';
   import { toTypedSchema } from '@vee-validate/zod';
   import *as z from 'zod';
+import type { User } from '~/types/user';
   const useAuth = useAuthStore();
   const msmErrors = ref(false)
 
@@ -105,7 +106,7 @@
     // const onSubmit = handleSubmit(values => {
     //   console.log('Form Submitted:', values);
     // });
-    const onSubmit = async (values) => {
+    const onSubmit = async (values:any) => {
       const preData: User = {
         id: 1,
         username: values.name,

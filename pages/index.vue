@@ -12,9 +12,29 @@
   <div class="w-full flex justify-center">
     <button @click="router.push('/users')" class="p-2 broder border-red-500 bg-orange-400 text-white cursor-pointer">Want to challeng accessing? Plz click</button>
   </div>
-  <ul v-if="hasPermission(useAuth.user,'list-user')" class="bg-white p-10 grid grid-cols-4 gap-8">
-    <li v-for="sm in sampleList" :key="sm.id">
-      <img :src="sm.profile" alt="ss">
+  <div class="w-full flex justify-center my-4">
+    <ul class="list-none flex gap-x-4">
+      <li class="grid grid-cols-1">
+        <button 
+        :disabled="hasPermission(useAuth.user, 'list-view') === true ? false : true"
+        :class="formatList !== 'grid'? 'bg-gray-700' : 'bg-gray-400'"
+        @click="formatList = 'list'"
+        class="px-5 py-1 rounded-sm bg-gray-400 hover:bg-gray-500 cursor-pointer text-white">LIST</button>
+      </li>
+      <li class="grid grid-cols-1">
+        <button 
+        :disabled="hasPermission(useAuth.user, 'grid-view') === true ? false : true"
+        @click="formatList = 'grid'"
+        :class="formatList === 'grid'? 'bg-gray-700' : 'bg-gray-400' "
+        class="px-5 py-1  rounded-sm  hover:bg-gray-500 cursor-pointer text-white">GRID</button>
+      </li>
+    </ul>
+  </div>
+  <ul v-if="hasPermission(useAuth.user,'list-user')" 
+  :class="formatList==='grid' ? 'md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 grid-cols-3': 'grid-cols-1'"
+  class="bg-white p-10 grid  gap-8">
+    <li v-for="sm in sampleList" :key="sm.id" :class="formatList !== 'grid' ? 'border border-gray-200 flex items-center gap-3': ''">
+      <img :src="sm.profile" alt="ss" :class="formatList !== 'grid' ? 'w-48': ''">
     {{ sm.name }}
     </li>
   </ul>
@@ -22,7 +42,7 @@
 
 <script setup lang="ts">
   const router = useRouter()
-
+  const formatList = ref("grid");
   const sampleList = ref(
     [
   {
@@ -88,4 +108,5 @@
       useAuth.logout();
       navigateTo('/login')
   }
+  
 </script>

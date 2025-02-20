@@ -1,0 +1,21 @@
+{
+  "title" : "Hello",
+  "welcome" : "Welcome TSC",
+  "login_with_camdigikey" : "Login with camdigikey",
+  "login_with_credentials": "Login with Credentials",
+  "signin": "Sign In",
+  "name": "Your name",
+  "email": "Email",
+  "password": "Password",
+  "remember_me" :"Remember Me",
+  "have_account" : "Don't have an account?",
+  "signup": "Sign up",
+  "required": "Required",
+  "loginform": {
+    "name_required": "Name is required",
+    "email_invalid": "Invalid email",
+    "password_invalid": "Password must be at least 6 characters"
+  },
+  "grid": "GRID",
+  "list": "LIST"
+}

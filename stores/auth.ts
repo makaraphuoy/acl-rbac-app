@@ -12,10 +12,19 @@ import type { User } from "~/types/user";
 export const useAuthStore = defineStore('auth', () => {
   const user = ref<User | null>(null);
   const isAuthenticated = ref(false)
-  const cookie = useCookie('tsc')
+  const cookie = useCookie('tsc');
+  const tscookie = useCookie('hi',{
+    httpOnly: true,
+    secure: true,
+    domain: 'localhost:3000'
+  })
+
+  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30';
 
   // Actions
   async function login(userData: User) {
+    await sessionStorage.setItem('hello-tsc',token);
+    tscookie.value = 'same-site'
     if(userData){
       const { data } = await useAsyncData('users', () => $fetch('/api/user'));
       if(data){

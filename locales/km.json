@@ -1,0 +1,21 @@
+{
+  "title" : "សួស្ដី",
+  "welcome" : "ស្វាគមន៏មកកាន់​ TSC",
+  "login_with_camdigikey" : "ចូលជាមួយ Camdigikey",
+  "login_with_credentials": "ចូលជាមួយ ប្រព័ន្ធ",
+  "signin": "ចូលប្រព័ន្ធ",
+  "name": "ឈ្មោះ",
+  "email": "អុីមែល",
+  "password": "លេខសម្ងាត់",
+  "remember_me" :"ចងចាំខ្ញុំ",
+  "have_account" : "មានគណនីទេ?",
+  "signup": "ចុះឈ្មោះ",
+  "required": "ទាមទារ",
+  "loginform": {
+    "name_required": "ឈ្មោះទាមទារ",
+    "email_invalid": "អុីមែលមិនត្រឹមត្រូវ",
+    "password_invalid": "លេខសម្ងាត់យ៉ាងតិច ៦ខ្ទង់"
+  },
+  "grid": "តារាងឈរ",
+  "list": "បញ្ជី"
+}

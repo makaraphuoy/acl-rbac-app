@@ -19,14 +19,14 @@
         :disabled="hasPermission(useAuth.user, 'list-view') === true ? false : true"
         :class="formatList !== 'grid'? 'bg-gray-700' : 'bg-gray-400'"
         @click="formatList = 'list'"
-        class="px-5 py-1 rounded-sm bg-gray-400 hover:bg-gray-500 cursor-pointer text-white">LIST</button>
+        class="px-5 py-1 rounded-sm bg-gray-400 hover:bg-gray-500 cursor-pointer text-white">{{ $t('list') }}</button>
       </li>
       <li class="grid grid-cols-1">
         <button 
         :disabled="hasPermission(useAuth.user, 'grid-view') === true ? false : true"
         @click="formatList = 'grid'"
         :class="formatList === 'grid'? 'bg-gray-700' : 'bg-gray-400' "
-        class="px-5 py-1  rounded-sm  hover:bg-gray-500 cursor-pointer text-white">GRID</button>
+        class="px-5 py-1  rounded-sm  hover:bg-gray-500 cursor-pointer text-white">{{ $t('grid') }}</button>
       </li>
     </ul>
   </div>
@@ -103,10 +103,18 @@
   })
   const useAuth = useAuthStore();
   const isAdmin = computed(() => useAuth.user?.role && useAuth.user?.role === 'admin')
+  const {data} = await useAsyncData('test', () => $fetch('/api/user',{
+    // headers:{
+    //   'Authorization': `Bearer ${sessionStorage.getItem('hello-tsc')}`
+    // }
+  }))
+  // if(sessionStorage.getItem('hello-tsc')){
+  //   console.log(sessionStorage.getItem('hello-tsc'))
+  // }
   
   const logoutHandler = () =>{
       useAuth.logout();
       navigateTo('/login')
   }
-  
+
 </script>

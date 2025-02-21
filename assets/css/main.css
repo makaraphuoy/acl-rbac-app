@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100;300;400;700;900&display=swap');
 /* Start Global Variables with TailwindCSS*/
 
 @layer base {
@@ -20,6 +20,9 @@ body{
   background-color: var(--theme-body-color);
   padding: 0px;
   margin: 0px;
+  font-family: "Hanuman", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @keyframes slideIn {

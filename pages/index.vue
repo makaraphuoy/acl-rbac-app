@@ -43,6 +43,7 @@
 <script setup lang="ts">
   const router = useRouter()
   const formatList = ref("grid");
+  //#region
   const sampleList = ref(
     [
   {
@@ -95,9 +96,8 @@
     "profile": "https://imgs.search.brave.com/ETyy6vWXedOG24w8K56FzhSkSfwQKH6abQRlBtyX4aA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA5LzM3LzY1Lzk2/LzM2MF9GXzkzNzY1/OTYyNV9MM3JGU2Fv/THFtQktVdmxyajdE/WXdkdGJCcWNja2ZY/Ny5qcGc",
     "name": "James White"
   }
-]
-   
-)
+] )
+//#endregion
   definePageMeta({
     middleware: ["auth"]
   })
@@ -108,9 +108,7 @@
     //   'Authorization': `Bearer ${sessionStorage.getItem('hello-tsc')}`
     // }
   }))
-  // if(sessionStorage.getItem('hello-tsc')){
-  //   console.log(sessionStorage.getItem('hello-tsc'))
-  // }
+  //const sessoin = useSessionStorage();
   
   const logoutHandler = () =>{
       useAuth.logout();

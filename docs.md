@@ -12,3 +12,6 @@
 - UI -> Not yet base on Leader/PM
 - Nuxt-i18n
 -  
+
+
+    //"@nuxtjs/i18n": "^9.2.0",

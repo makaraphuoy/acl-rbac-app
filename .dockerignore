@@ -1,0 +1,14 @@
+node_modules
+npm-debug.log
+yarn-error.log
+.dockerignore
+.git
+.gitignore
+.env
+.nuxt
+output
+dist
+logs
+.cache
+.vscode
+.idea

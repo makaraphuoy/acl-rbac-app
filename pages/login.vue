@@ -1,10 +1,10 @@
 definePageMeta<template>
   <main class="w-full grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 2xl:grid-cols-12 grid-cols-1 md:h-[100vh] lg:h-[100vh] xl:h-[100vh] 2xl:h-[100vh] md:max-h-[100vh] lg:max-h-[100vh] xl:max-h-[100vh] 2xl:max-h-[100vh] ">
-    <div class="md:col-span-8 lg:col-span-8 xl:col-span-8 2xl:col-span-8 col-span-1 md:block lg:block xl:block 2xl:block hidden">
+    <div class="md:col-span-7 lg:col-span-8 xl:col-span-8 2xl:col-span-8 col-span-1 md:block lg:block xl:block 2xl:block hidden">
       <img class="w-full md:h-full lg:h-full xl:h-full h-52 object-cover" src="https://image.freshnewsasia.com/2020/id-025/fn-2020-05-20-12-18-25-0.jpg" alt="logo">
     </div>
     <div  
-      class="relative md:bg-none lg:bg-none md:bg-amber-100 bg-cover bg-center bg-[#0000004b] bg-opacity-50 bg-blend-multiply bg-[url(https://image.freshnewsasia.com/2020/id-025/fn-2020-05-20-12-18-25-0.jpg)] md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-4  col-span-1 flex flex-col justify-around p-6 md:h-auto lg:h-auto xl:h-auto h-[100vh]">
+      class="relative md:bg-none lg:bg-none md:bg-pink-100 lg:bg-pink-100 xl:bg-pink-100 bg-cover bg-center bg-[#0000004b] bg-opacity-50 bg-blend-multiply bg-[url(https://image.freshnewsasia.com/2020/id-025/fn-2020-05-20-12-18-25-0.jpg)] md:col-span-5 lg:col-span-4 xl:col-span-4 2xl:col-span-4  col-span-1 flex flex-col justify-around p-6 md:h-auto lg:h-auto xl:h-auto h-[100vh]">
       <template v-if="loginIndex===0">
         <div class="absolute left-0 top-0 p-10">
           <button class="border-2 px-4 py-1 bg-white border-white cursor-pointer bg-primary-50" @click="setLocale(locale === 'en'? 'km': 'en')">
